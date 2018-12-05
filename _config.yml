@@ -1,1 +1,9 @@
+# Site settings
+title: Evennaire's Blog
+SEOTitle: Evenniare的博客
+description: "Hello, strangers"
+
+paginate: 10
+github_username: Evennaire
+
 theme: jekyll-theme-midnight
