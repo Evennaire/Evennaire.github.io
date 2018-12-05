@@ -1,2 +1,10 @@
 baseurl: /
 theme: jekyll-theme-midnight
+# Site settings
+title: Evennaire's Blog
+SEOTitle: Evenniare的博客
+description: "Hello, strangers"
+
+paginate: 10
+
+theme: jekyll-theme-midnight
