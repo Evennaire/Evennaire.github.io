@@ -1,19 +1,63 @@
-　　<!DOCTYPE html>
+---
+layout: compress
+# Default layout
+# v2.0
+# https://github.com/cotes2020/jekyll-theme-chirpy
+# © 2017-2019 Cotes Chung
+# MIT Licensed
+---
 
-　　<html>
+<!DOCTYPE html>
 
-　　<head>
+{% if site.lang %}
+  {% assign lang = site.lang | split: "_" | first %}
+{% else %}
+  {% assign lang = 'en' %}
+{% endif %}
 
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+{% capture prefer_mode %}
+  {% if site.theme_mode != "dual" %}
+    mode="{{ site.theme_mode }}"
+  {% endif %}
+{% endcapture %}
 
-　　　　<title>{{ page.title }}</title>
+<html lang="{{ lang }}" {{ prefer_mode }} >
 
-　　</head>
+  {% include head.html %}
 
-　　<body>
+  <body data-spy="scroll" data-target="#toc">
 
-　　　　{{ content }}
+    <div id="sidebar" class="d-flex flex-column">
+      {% include sidebar.html %}
+    </div>
 
-　　</body>
+    {% include topbar.html %}
 
-　　</html>
+    <div id="main-wrapper">
+      <div id="main">
+
+        {% include refactor-content.html content=content %}
+
+        {% include footer.html %}
+
+      </div>
+
+      {% include search-results.html %}
+
+    </div> <!-- #main-wrapper -->
+
+    <div id="mask"></div>
+
+    <a id="back-to-top" href="#" class="btn btn-lg btn-box-shadow" role="button">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    {% if jekyll.environment == 'production' %}
+      {% include google-analytics.html %}
+    {% endif %}
+
+    {% include search-loader.html %}
+
+  </body>
+
+</html>
