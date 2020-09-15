@@ -7,36 +7,45 @@ tags: [wordpress, web]
 toc: false
 ---
 
-```
-# 杀死所有uwsgi进程
-sudo pkill -f uwsgi -9
+[用nginx+WordPress搭建个人博客全流程](https://segmentfault.com/a/1190000018964702)
 
-# 启动
-uwsgi --ini uwsgi.ini
-# 停止
-uwsgi --stop uwsgi.pid
-# 重启
-uwsgi --reload uwsgi.pid
-# 日志路径
-/home/soaproj/uwsgi/uwsgi.log
-```
+ 
 
-```
-# nginx
-# 重启
-/usr/local/nginx/sbin/nginx -s reload
-# conf路径
-/usr/local/nginx/conf/nginx.conf
-# 查看日志
-cat /usr/local/nginx/logs/access.log | tail -n 20
-cat /usr/local/nginx/logs/error.log | grep GET\ /\
-```
+**维护**
 
-```
-# mariadb
-# 重启
-service mariadb restart
-```
+“建立数据库连接时出错”：重启数据库
+`systemctl restart mariadb`
 
-两台服务器间文件实时同步：
-<a href="https://www.jianshu.com/p/76ec8ac0c8b1?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener noreferrer">Linux服务器间文件实时同步</a>
+
+
+## 为主题增加分页功能
+
+`wordpress/wp-content/themes/[theme name]`目录下：
+
++ `functions.php`增加分页代码：
+
+  ```
+  function wp_pagenavi(){
+  	global $wp_query;
+   
+  	$big = 999999999; // 需要一个不太可能的整数
+   
+  	$pagination_links = paginate_links( array(
+  		'base' => str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+  		'format' => '?paged=%#%',
+  		'current' => max( 1, get_query_var('paged') ),
+  		'total' => $wp_query->max_num_pages
+  	) );
+   
+  echo $pagination_links;
+  }
+  ```
+
++ 在需要分页的地方添加：
+
+  ```php
+  wp_pagenavi();
+  ```
+
+  需要分页的地方也是在当前主题文件夹下的`index.php` `archive.php` `search.php` `home.php`四个文件里，把`the_posts_navigation();`换成pagenavi函数就可以了。
+
