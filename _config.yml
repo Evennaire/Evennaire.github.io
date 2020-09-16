@@ -10,7 +10,7 @@
 
 title: Evenotes                          # the main title
 
-tagline: Calm & Active.  # it will display as the sub-title
+tagline: Keep Active & Calm.  # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
   A minimal, portfolio, sidebar,
@@ -18,7 +18,7 @@ description: >-                        # used by seo meta and the atom feed
   and focuses on text presentation.
 
 # Replace with the website url, e.g. 'https://username.github.io'
-url: 'https://blog.evenyin.com'
+url: 'https://evenyin.com'
 
 author: Even                  # change to your full name
 
@@ -31,11 +31,11 @@ twitter:
   username: twitter_username            # change to your twitter username
 
 social:
-  name: Yiwen Yin                  # it will shows as the copyright owner in Footer
+  name: Even Yin                  # it will shows as the copyright owner in Footer
   email: evenyin59@gmail.com             # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username      # change to your twitter homepage
+    # - https://twitter.com/username      # change to your twitter homepage
     - https://github.com/evennaire       # change to your github homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
