@@ -40,6 +40,17 @@
 
   {% endif %} <!-- site.data.updates -->
 
+
+  {% if page.layout == 'post' and site.toc and page.toc %}
+  <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+    <h3 data-toc-skip class="pl-3 pt-2 mb-2">
+      {{- site.data.label.panel.toc -}}
+    </h3>
+    <nav id="toc" data-toggle="toc"></nav>
+  </div>
+  {% endif %}
+
+
   {% include trending-tags.html %}
 
   {% if trending_tags.size > 0 %}
@@ -58,13 +69,5 @@
   {% endif %}
   </div> <!-- .access -->
 
-  {% if page.layout == 'post' and site.toc and page.toc %}
-  <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
-    <h3 data-toc-skip class="pl-3 pt-2 mb-2">
-      {{- site.data.label.panel.toc -}}
-    </h3>
-    <nav id="toc" data-toggle="toc"></nav>
-  </div>
-  {% endif %}
-
+  
 </div> <!-- #panel-wrapper -->
