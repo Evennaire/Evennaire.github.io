@@ -78,7 +78,7 @@ disqus:
 #
 #     dark   - Use the dark color scheme
 #
-theme_mode: light
+theme_mode: dual
 
 # boolean type, global switch for ToC in posts.
 toc: true
@@ -91,6 +91,7 @@ highlighter: rouge
 
 kramdown:
   input: GFM
+  hard_wrap: true
   syntax_highlighter: rouge
   syntax_highlighter_opts: # Rouge Options › https://github.com/jneen/rouge#full-options
     css_class: 'highlight'
