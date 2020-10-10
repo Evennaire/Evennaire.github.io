@@ -43,3 +43,21 @@ django连接mysql：
 bind-address = 127.0.0.1
 </code>
 这两行，重启mariadb即可。
+
+
+
+
+
+
+
+## Angular
+
+creating new component:
+
+```
+ng g componet xxx
+npm install
+```
+
+
+
