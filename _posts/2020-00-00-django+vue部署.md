@@ -142,7 +142,7 @@ dev的时候在config/index.js里/api代理成127.0.0.1:8000;
 	参考[https://www.jianshu.com/p/79a313d6cf99](https://www.jianshu.com/p/79a313d6cf99)
 
 3. nginx.conf
-	```
+  ```
 	#user  nobody;
 	worker_processes  1;
 	events {
@@ -189,5 +189,5 @@ dev的时候在config/index.js里/api代理成127.0.0.1:8000;
 	        }
 	    }
 	}
-	```
+  ```
 	nginx可以先部署后端（# backend那部分），访问[server ip]:8082，先确认后端部署+nginx反代是否成功；再调前端。
