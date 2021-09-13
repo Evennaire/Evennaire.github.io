@@ -11,7 +11,7 @@ keywords: [More fish]
 baseurl: '' # the subpath of your site, e.g. /`blog
 url: '' # the base hostname & protocol for your site, e.g. http://example.com
 domain: 'evenyin.com' # the domain name for your site, e.g. example.com
-language: zh-cn
+language: en
 # Supported languages list:
 # en: English
 # de: Deutsche (German)
@@ -31,7 +31,7 @@ disqus: # disqus account
 mathjax: true # Math support
 diagram: true # Diagrams support
 
-paginate: 25
+paginate: 50
 paginate_path: '/page:num/'
 
 permalink: /:year/:month/:day/:title
