@@ -2,7 +2,7 @@
 title: AngularJS+Django+Mysql
 author: Even
 date: 2020-09-13 17:04:00 +0800
-categories: [CS, Web]
+categories: [技术]
 tags: [web]
 toc: false
 ---

@@ -2,7 +2,7 @@
 title: django+vue部署
 author: Even
 date: 2020-03-21 03:51:00 +0800
-categories: [CS, Web]
+categories: [技术]
 tags: [web]
 toc: false
 ---

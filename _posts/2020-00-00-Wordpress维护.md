@@ -1,8 +1,8 @@
-﻿---
+---
 title: Wordpress
 author: Even
 date: 2020-07-23 14:23:00 +0800
-categories: [CS, Web]
+categories: [网站]
 tags: [wordpress, web]
 toc: false
 ---
