@@ -56,7 +56,7 @@
             </a>
           </li>
 
-          <!-- Other pages -->
+          {% comment %} <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
           {% for p in sorted_pages %}
             {% if p.nav and p.autogen == null %}
@@ -134,7 +134,7 @@
                 <i class="ti ti-sun-filled" id="light-toggle-light"></i>
               </button>
             </li>
-          {% endif %}
+          {% endif %} {% endcomment %}
         </ul>
       </div>
     </div>
