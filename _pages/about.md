@@ -31,3 +31,5 @@ latest_posts:
 Hi, I'm Yiwen Yin (殷翊文), and you can call me Even as well^^
 
 I am currently a fourth year Ph.D. student in [Pervasive Human-Computer Interaction Lab](https://pi.cs.tsinghua.edu.cn/) at Tsinghua University, under the guidance of Prof. Yuanchun Shi and Prof. Chun Yu. My research focuses on **AI agents for task automation and collaboration**, with interests in interactive knowledge learning, task modeling, UI agents, and Human-AI alignment.
+
+I am also interested in literature, singing, traveling, photagraphy, language learning, archery... and always open to new possibilities!
